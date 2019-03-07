@@ -4,10 +4,12 @@
   "license": "None provided",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.18.3",
     "concurrently": "^3.6.0",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "nodemon": "^1.17.5",
+    "pg": "^7.8.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"

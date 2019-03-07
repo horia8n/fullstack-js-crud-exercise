@@ -1,5 +1,99 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+.cl {
+  clear: both; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+.root {
+  display: block;
+  width: 100%;
+  text-align: center; }
+
+.App {
+  text-align: left;
+  padding: 20px;
+  display: block;
+  max-width: 1080px;
+  width: 80%;
+  margin-left: 10%; }
+
 h1 {
   font-size: 24px;
   padding: 20px;
-  margin: 0;
-}
+  margin: 0; }
+
+table {
+  text-align: left; }
+  table td {
+    padding: 5px 10px; }
+  table thead td {
+    border: 1px solid #ddd;
+    background-color: #eee;
+    font-size: 12px; }
+    table thead td.deleteTD {
+      cursor: default; }
+    table thead td:last-child {
+      background-color: #fff;
+      border: 0; }
+  table tbody tr:nth-child(odd) td {
+    background-color: #fafafa; }
+  table tbody td {
+    min-width: 100px;
+    max-width: 1000px;
+    border: 1px solid #eee;
+    color: #888;
+    cursor: pointer;
+    position: relative;
+    vertical-align: top; }
+    table tbody td div.viewMode {
+      display: block;
+      margin: 0;
+      font-size: 12px; }
+    table tbody td div.viewLine {
+      display: block;
+      height: 12px;
+      margin: 0;
+      font-size: 12px; }
+    table tbody td textarea.editMode {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 7px 5px 0;
+      font-size: 12px;
+      background-color: #fff;
+      color: #009e00;
+      border: 0;
+      line-height: 12px; }
+    table tbody td.deleteTD {
+      min-width: 20px;
+      border: 0;
+      color: #ff0000;
+      padding: 5px 10px;
+      font-size: 18px;
+      background-color: #fff !important; }
+    table tbody td.insertTD {
+      min-width: 20px;
+      border: 0;
+      color: #ff0000;
+      padding: 0px 0px;
+      font-size: 24px;
+      font-weight: 600;
+      background-color: #fff !important; }
+    table tbody td.insertTDfirst {
+      min-width: 20px;
+      border: 0;
+      background-color: #fff !important; }
+
+/*# sourceMappingURL=App.css.map */

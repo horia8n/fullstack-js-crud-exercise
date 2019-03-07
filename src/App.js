@@ -1,43 +1,82 @@
 import React from 'react';
+import Table from './Table';
+import './App.css';
+
+const ROOT_URL = "http://localhost:8080";
 
 class App extends React.Component {
-  state = {
-    employees: []
-  }
-  
-  componentWillMount = () => {
-    fetch('http://localhost:8080/api/employees')
-      .then(response => response.json())
-      .then(employees => this.setState({ employees }))
-  }
+    state = {
+        employees: []
+    };
 
-  render() {
-    const {
-      employees
-    } = this.state;
+    componentWillMount = () => {
+        this.fetchPosts();
+    };
 
-    console.log(this.state);
+    fetchPosts = () => {
+        console.log('fetchPosts()');
+        fetch(`${ROOT_URL}/api/employees`, {method: 'GET'})
+            .then(response => response.json())
+            .then(employees => this.setState({employees}))
+    };
 
-    return (
-      <div className="App">
-        <h1>Plexxis Employees</h1>
-        {
-          employees.map(employee => (
-            <div key={employee.id}>
-              {
-                Object.keys(employee).map(key => 
-                  <span key={key}>
-                    { key }:
-                    { employee[key] } 
-                  </span>
-                )
-              }
-            </div>
-          ))
+    fetchPost = (id ) => {
+        console.log('fetchPost(id)');
+        fetch(`${ROOT_URL}/api/employees/${id}`, {method: 'GET'})
+            .then(response => response.json())
+            .then(employees => this.setState({employees}))
+    };
+
+    createPost = (row ) => {
+        console.log('createPost()');
+        fetch(`${ROOT_URL}/api/employees/insert`, {
+            method: 'POST',
+            body: JSON.stringify(row),
+            headers: {
+                'Content-Type': 'application/json'
+            }})
+            .then(response => response.json())
+            .then(employees => this.setState({employees}))
+    };
+
+    deletePost = (id ) => {
+        console.log('deletePost()');
+        console.log('id', id);
+        fetch(`${ROOT_URL}/api/employees/${id}`, {method: 'DELETE'})
+            .then(response => response.json())
+            .then(employees => this.setState({employees}))
+    };
+
+    updatePost = (id, row ) => {
+        console.log('updatePost()');
+        fetch(`${ROOT_URL}/api/employees/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify(row),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+           })
+            .then(response => response.json())
+            .then(employees => this.setState({employees}))
+    };
+
+    render() {
+        if(!this.state.employees){
+            return null;
         }
-      </div>
-    );
-  }
+        return (
+            <div className="App">
+                <h1>Plexxis Employees</h1>
+                <Table
+                    employees={this.state.employees}
+                    fetchPost={this.fetchPost}
+                    createPost={this.createPost}
+                    deletePost={this.deletePost}
+                    updatePost={this.updatePost}
+                />
+            </div>
+        );
+    }
 }
 
 export default App;

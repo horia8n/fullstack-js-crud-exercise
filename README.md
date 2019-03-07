@@ -1,31 +1,23 @@
 # Plexxis Interview Exercise
-## Requirements
-Create a simple but __impressive__ (looks good, works well, has intuitive design, etc.) CRUD application that can do the following:
 
-1) Retrieve employees from a REST API  
-2) Display the employees in a React application  
-3) Has UI mechanisms for creating and deleting employees  
-4) Has API endpoints for creating and deleting employees  
-5) Edit your version of the `README.md` file to explain to us what things you did, where you focussed your effort, etc.
+Not much of an explanation to be given, this is an editable table.
 
-*Read over the `Bonus` objectives and consider tackling those items as well*
+I already had this script before as this is also an existing demo in my portfolio.
 
-## Bonus (Highly Encouraged)
+The difference is that in my demo I use redux and axios. I changed this so it works with fetch and no redux.
 
-1) Use a relational database to store the data (SQLite, MariaDB, Postgres)  
-2) UI mechanisms to edit/update employee data  
-3) Add API endpoint to update employee data  
-4) Use [React Table](https://react-table.js.org)  
+If you want to see the redux version please refer to <a href="https://github.com/horia8n/react_node_dbs">this</a> repo.
 
-## Getting Started
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). The front-end app runs off localhost:3000. The REST API is located in the /server folder and runs off localhost:8080. The data is being served from a JSON file located in the /server/data folder. Run `npm start` to start both servers.
+It is a complete CRUD example. The data comes from a db and the node contains hooks to Insert, Delete and Update as well.
 
-## Getting it Done
-* You are free to use whatever libraries that you want. Be prepared to defend your decisions.
-* There is no time limit. Use as little or as much time as is necessary to showcase your abilities.
-* You should fork or clone our repository into your own repository.
-  * Send us the link when you are done the exercise (pglinker at plexxis dot com).
+This html table would work with any db table as the headers are not hardcoded. I actually made this demo as I thought it would be the best way to show my React-Node skills.
 
-If you do well on the test, we will bring you in for an interview. Your test results will be used as talking points.  
+The node part uses pg driver and accesses the data from postgres.
 
- __This is your chance to amaze us with your talent!__
+I would have loved to change the color edit mode into a color picker and the boolean in to a checkbox but I really don't have the time.
+
+I also took a look at the React Table and it looks like a tool that could save some time. I didn't use it here as my time is limited but if you guys insist and give me more time, I could...
+
+Otherwise, YES, this is my main skill: COPY and PASTE. If you don't get the joke, you're not a programmer.
+
+Cheers

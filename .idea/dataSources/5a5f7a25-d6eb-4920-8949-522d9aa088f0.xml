@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="plexxis@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.4">
+    <root id="1"/>
+    <database id="2" parent="1" name="plexxis">
+      <ObjectId>34008</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12558</ObjectId>
+    </database>
+    <database id="4" parent="1" name="test">
+      <ObjectId>16384</ObjectId>
+    </database>
+    <database id="5" parent="1" name="face-recognition">
+      <ObjectId>16404</ObjectId>
+    </database>
+    <database id="6" parent="1" name="dvdtwo">
+      <ObjectId>24577</ObjectId>
+    </database>
+    <database id="7" parent="1" name="newdvddatabase">
+      <ObjectId>24578</ObjectId>
+    </database>
+    <database id="8" parent="1" name="OnlySchema">
+      <ObjectId>25262</ObjectId>
+    </database>
+    <database id="9" parent="1" name="exercises">
+      <ObjectId>25586</ObjectId>
+    </database>
+    <database id="10" parent="1" name="learning">
+      <ObjectId>25631</ObjectId>
+    </database>
+    <database id="11" parent="1" name="wildfood">
+      <ObjectId>25776</ObjectId>
+    </database>
+    <schema id="12" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2019-03-04.19:51:53.026</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1654</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="13" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="17" parent="2" name="information_schema">
+      <ObjectId>12267</ObjectId>
+    </schema>
+    <sequence id="18" parent="12" name="employees_id_seq">
+      <ObjectId>34044</ObjectId>
+      <StateNumber>1654</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="19" parent="12" name="employees">
+      <ObjectId>34046</ObjectId>
+      <StateNumber>1654</StateNumber>
+    </table>
+    <column id="20" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1654</StateNumber>
+      <SequenceName>employees_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;employees_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="21" parent="19" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>1654</StateNumber>
+    </column>
+    <column id="22" parent="19" name="code">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>1654</StateNumber>
+    </column>
+    <column id="23" parent="19" name="profession">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>1654</StateNumber>
+    </column>
+    <column id="24" parent="19" name="color">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>1654</StateNumber>
+    </column>
+    <column id="25" parent="19" name="city">
+      <Position>6</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>1654</StateNumber>
+    </column>
+    <column id="26" parent="19" name="branch">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>1654</StateNumber>
+    </column>
+    <column id="27" parent="19" name="assigned">
+      <Position>8</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>1654</StateNumber>
+    </column>
+    <index id="28" parent="19" name="employees_pkey">
+      <ObjectId>34053</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="19" name="employees_pkey">
+      <ObjectId>34054</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>employees_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
